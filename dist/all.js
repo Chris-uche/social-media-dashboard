@@ -1,0 +1,1 @@
+var checkbox=document.querySelector("#checkbox"),cards=document.querySelectorAll(".large-cards,.medium-cards"),body=document.querySelector("body"),before=document.querySelector(".before"),h=document.querySelector("h1,h2,h3,h4"),spanSubstitle=document.querySelector("span,.subtitle");
