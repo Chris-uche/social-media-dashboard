@@ -1,0 +1,39 @@
+@import 'variable';
+//@import 'nav';
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  //background-color: $BrightRed;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color:$VeryDarkBlueText;
+    font-size: 1.375rem;
+  }
+  p {
+    color: $DarkGrayishBlueText;
+    font-size: 0.75rem;
+  }
+  .green-p {
+    color: $LimeGreen;
+  }
+  .red-p {
+    color: $BrightRed;
+  }
+
+
+}

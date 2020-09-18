@@ -1,0 +1,53 @@
+@import 'variable';
+@import 'media';
+
+header{
+    width: 100%;
+    position: relative;
+   // background-color: red;
+    .container{
+        flex-wrap: wrap;
+        padding: 2.5625rem 9.6875rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            color:$VeryDarkBlueText;
+
+        }
+
+        @include breakDown(medium){
+            padding: 2.5625rem 1.5625rem;
+            .intro{
+                margin-bottom: 1.25rem; 
+        
+            }
+            .switch {
+                position: relative;
+                width: 100%;
+                justify-content: space-between;
+                &:before {
+                  content: "";
+                  position: absolute;
+                  height: 0.0625rem;
+                  width: 100%;
+                  background-color: $VeryDarkBlueText;
+                  margin-top: -2.5rem;
+                }
+            }
+        }
+    }
+
+    .before {
+        position: absolute;
+        height: 14.5rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $VeryPaleBlueTopBGPattern;
+        border-bottom-right-radius: 0.9375rem;
+        border-bottom-left-radius: 0.9375rem;
+        z-index: -1;
+    }
+
+}

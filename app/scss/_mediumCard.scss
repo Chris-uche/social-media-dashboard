@@ -1,0 +1,67 @@
+@import 'variable';
+@import 'media';
+
+/*.mediumCard{
+    background-color: brown;
+} */
+h2{
+    margin: 3.0625rem 9.6875rem 1.375rem;
+    @include breakDown(medium){
+        margin: 3rem 1.5rem 1.875rem;
+    }
+}
+.medium-card-container{
+    width: 100%;
+    padding: 0 9.6875rem;
+    flex-wrap: wrap;
+    //We are adding this breakDown for medium screen devices
+    @include breakDown(medium){
+        padding: 0 1.5rem;
+        .medium-cards{
+            min-width: 100%;
+            min-height: 7.9375rem;
+        }
+
+    }
+
+    .medium-cards{
+        transition: all 0.3s ease-in-out;
+        height: 7.4375rem;
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $LightGrayishBlueCardBG;
+        margin-bottom: 1.4375rem;
+        padding: 1.5rem 1.875rem;
+        border-radius: 0.625rem;
+
+        cursor: pointer;
+
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bottom{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            font-size: 1.5625rem;
+        }
+        P {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            img {
+              padding-right: 0.125rem;
+            }
+        }
+
+    }
+}

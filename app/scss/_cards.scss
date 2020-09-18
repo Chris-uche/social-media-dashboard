@@ -1,0 +1,78 @@
+
+@import 'variable';
+@import 'media';
+@import 'mediumCard';
+
+.large-card-container{
+    width: 100%;
+    padding: 0 9.6875rem;
+    flex-wrap: wrap;
+
+    @include breakDown(medium) {
+        padding: 0 1.5625rem;
+    }
+
+    .large-cards{
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        height: 13rem;
+        width: 15.0625rem;
+        padding: 1.75rem 0;
+        background-color: $LightGrayishBlueCardBG;
+        text-align: center;
+        border-radius: 0.625rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:before{
+            content: "";
+            height: 0.375rem;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        @include breakDown(medium){
+            width: 100%;
+            margin-bottom: 1.4375rem;
+        }
+        &.facebook:before {
+            background-color:$Facebook;
+        }
+        &.twitter:before {
+            background-color:$Twitter;
+        }
+        &.instagram:before {
+            background-image: $Instagram;
+        }
+        &.youtube:before {
+            background-color: $YouTube;
+        }
+
+        h1 {
+            margin: 1.75rem 0;
+            font-size: 2.625rem;
+            span {
+              display: block;
+              font-size: 0.6875rem;
+              color: $DarkGrayishBlueText;
+              letter-spacing: 0.25rem;
+            }
+        }
+        P {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: 0 auto;
+            img {
+              padding-right: 0.125rem;
+            }
+        }
+    }
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
